@@ -1,0 +1,35 @@
+<html>
+    {% load static %}
+    <head>
+        <title></title>
+    </head>
+<body>
+    {% block content %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/icon type" href="{%static 'images/logo.jpg'%}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %} ">
+        <style>
+            body {
+            background-image: url({%static 'images/bg1.jfif' %});
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        </style>
+<body>
+
+    <div class="container">
+        <div class="logo">
+          <img src="{%static 'images/logo.jpg'%}" alt="" width="50px" height="50px" />
+          </div>
+<ul class="topnav">
+  <li><a class="active" href="">Home</a></li>
+  <li><a href="admin">Admin</a></li>
+  <li><a href="check">Student</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li class="right"><a href="{% url 'about' %}">About</a></li>
+</ul>
+
+    {%endblock  %}
+</body>
+</html>
